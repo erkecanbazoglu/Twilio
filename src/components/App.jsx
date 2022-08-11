@@ -1,7 +1,8 @@
 import React from 'react';
 import Hello from './Hello';
-import Header from './headers/Header';
+import Header from './header/Header';
 import Padding from './Padding';
+import Footer from './footer/Footer';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <div class="drop-shadow-xl">
           <Header />
           <Padding />
-          <Hello />
+          <Footer />
         </div>
 
       </div>

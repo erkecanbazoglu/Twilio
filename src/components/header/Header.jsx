@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
 import TitleBar from './TitleBar'
 import Logo from './Logo'
-import Dropdown from './Dropdown'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import LanguageIcon from '@mui/icons-material/Language';
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import LanguageHeaderItem from './LanguageHeaderItem'
 
 function Header() {
 
     const [isHeaderDropdown, setShowHeaderDropdown] = useState(false);
-    const [isLanguageDropdown, setShowLanguageDropdown] = useState(false);
 
     function showHeader() {
         setShowHeaderDropdown(!isHeaderDropdown);
-    }
-
-    function showLanguageDropdown() {
-        setShowLanguageDropdown(!isLanguageDropdown);
     }
 
     return (
@@ -32,33 +23,9 @@ function Header() {
                         </button>
                         <div class="w-min " id="navbar-solid-bg">
                             <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-                                <li>
-                                    <button id="dropdownNavbarLink" onClick={showLanguageDropdown} data-dropdown-toggle="dropdownNavbar" class="flex justify-between items-center h-full py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                        <LanguageIcon className="pr-0.5 text-blue-900 " fontSize="small" />
-                                        <div class="pr-1"></div>
-                                        <p class="text-xs text-blue-900 font-semibold" >English</p>
-                                        <KeyboardArrowUpIcon className="text-blue-900 transform rotate-180 transition duration-1000" fontSize="small" />
-                                    </button>
-                                    <Dropdown condition={isLanguageDropdown} />
-
-                                </li>
-                                {/* Hero icon implementation */}
-                                {/* <li>
-                                    <ChevronDownIcon className="h-5 w-5 text-blue-900" />
-                                </li> */}
-                                <li>
-                                    <button id="dropdownNavbarLink" onClick={showLanguageDropdown} data-dropdown-toggle="dropdownNavbar" class="flex justify-between items-center h-full py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                        <p class="text-xs text-blue-900 font-semibold" >Support</p>
-                                        <KeyboardArrowUpIcon className="text-blue-900 transform rotate-180 transition duration-1000" fontSize="small" />
-                                    </button>
-                                    <Dropdown condition={isLanguageDropdown} />
-
-                                </li>
-                                <li>
-                                    <button class="flex justify-between items-center h-full py-2 pr-4 pl-3 w-full font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                                        <p class="text-xs text-blue-900 font-semibold whitespace-nowrap items-center" >Log in</p>
-                                    </button>
-                                </li>
+                                <LanguageHeaderItem type={"language"} />
+                                <LanguageHeaderItem type={"support"} />
+                                <LanguageHeaderItem type={"login"} />
                             </ul>
                         </div>
                     </div>

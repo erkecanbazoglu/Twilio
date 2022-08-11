@@ -16,7 +16,14 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
-      }
+      },
+      fontFamily: {
+        aleo: ['Aleo', 'serif'],
+        ibm: ['IBM Plex Serif', 'serif'],
+      },
+      colors: {
+        'footer-blue': '#0d112b',
+      },
     },
   },
   plugins: [],

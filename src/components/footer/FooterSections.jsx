@@ -5,9 +5,9 @@ function FooterSections(props) {
 
     const footerList = props.footerList;
 
-    function createListItems(footerItem) {
+    function createListItems(footerItem, index) {
         return (
-            <FooterSectionItem title={footerItem} />
+            <FooterSectionItem key={index} title={footerItem} />
         );
     }
 

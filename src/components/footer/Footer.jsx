@@ -32,7 +32,7 @@ function Footer() {
                 <div class="flex flex-col items-center justify-between">
                     <div class="flex flex-col items-center">
                         <div class="flex flex-row items-center mb-4">
-                            {footerLegalList.map((legalButton, index) => { return <LegalButton text={footerLegalList[index]} /> })}
+                            {footerLegalList.map((legalButton, index) => { return <LegalButton key={index} text={footerLegalList[index]} /> })}
                         </div>
                         <CopyrightText text={"COPYRIGHT © " + currentYear + " TWILIO INC."} />
                         <CopyrightText text={"ALL RIGHT RESERVED."} />

@@ -9,12 +9,17 @@ module.exports = {
         '1': '1px',
       },
       animation: {
-        'spin180': 'spin only by 180 degree',
+        'spin180': 'spin180 1s ease-in-out infinite',
+        'header': 'header 1s ease-in-out',
       },
       keyframes: {
         spin180: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        header: {
+          '0%': { transform: 'rotate(-3deg)' },
+          '100%': { transform: 'rotate(3deg)' },
         }
       },
       fontFamily: {
@@ -28,6 +33,7 @@ module.exports = {
         '26px': '26px',
       },
       fontSize: {
+        '2xs': '.625rem',
         'tiny': '.937rem',
       },
       lineHeight: {

@@ -17,18 +17,17 @@ function TitleBar(props) {
     const [prevDropdown, setPrevDropdown] = useState("null");
 
     async function closeDropdownTransition(index) {
-
-        console.log("1");
         let megaDropdown = document.getElementById("mega-dropdown");
         if (megaDropdown.classList.contains("opacity-100")) {
-            console.log("2");
             megaDropdown.classList.remove("opacity-100");
             megaDropdown.classList.add("opacity-0");
-            console.log("3");
         }
-        console.log("4");
+        let headerTitle = document.getElementById("header-title");
+        if (headerTitle.classList.contains("border-blue-600")) {
+            headerTitle.classList.remove("border-blue-600");
+            headerTitle.classList.add("border-white");
+        }
         await new Promise(resolve => setTimeout(resolve, 300));
-        console.log("5");
         setShowTitleDropdown(
             prevValue => {
                 return {
@@ -42,7 +41,6 @@ function TitleBar(props) {
                 };
             }
         );
-        console.log("6");
     }
 
     async function openDropdownTransition(index) {
@@ -63,6 +61,11 @@ function TitleBar(props) {
         if (megaDropdown.classList.contains("opacity-0")) {
             megaDropdown.classList.remove("opacity-0");
             megaDropdown.classList.add("opacity-100");
+        }
+        let headerTitle = document.getElementById("header-title");
+        if (headerTitle.classList.contains("border-white")) {
+            headerTitle.classList.remove("border-white");
+            headerTitle.classList.add("border-blue-600");
         }
     }
 

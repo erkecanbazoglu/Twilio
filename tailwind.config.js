@@ -24,6 +24,15 @@ module.exports = {
       colors: {
         'footer-blue': '#0d112b',
       },
+      margin: {
+        '26px': '26px',
+      },
+      fontSize: {
+        'tiny': '.937rem',
+      },
+      lineHeight: {
+        '78px': '78px',
+      }
     },
   },
   plugins: [],

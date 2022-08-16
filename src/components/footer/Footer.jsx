@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FooterSection from "./FooterSections";
 import CopyrightText from "./CopyrightText";
 import LegalButton from "./LegalButtons";
@@ -16,8 +16,8 @@ function Footer() {
     const footerLegalList = ["LEGAL", "PRIVACY", "TWILIO.ORG", "PRESS & MEDIA", "SIGNAL", "INVESTORS", "JOBS"];
 
     return (
-        <div class="relative bg-footer-blue text-gray-100 px-40 py-16">
-            <div class="ax-w-screen-xl mx-auto relative z-10">
+        <div class="bg-footer-blue text-gray-100 px-40 py-16">
+            <div class="ax-w-screen-xl mx-auto">
                 <div class="text-center text-5xl text-gray-400 font-light font-ibm italic tracking-wider">We can’t wait to see what you build.</div>
 
                 <div class="flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between">

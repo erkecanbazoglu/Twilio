@@ -28,6 +28,7 @@ module.exports = {
       },
       colors: {
         'footer-blue': '#0d112b',
+        'header-gray': '#f4f4f6',
       },
       margin: {
         '26px': '26px',

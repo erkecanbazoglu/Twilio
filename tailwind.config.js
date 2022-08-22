@@ -1,26 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       borderWidth: {
-        '1': '1px',
+        1: '1px',
       },
       animation: {
-        'spin180': 'spin180 1s ease-in-out infinite',
-        'header': 'header 1s ease-in-out',
+        pulse2: 'pulse 0.3s linear infinite',
       },
       keyframes: {
-        spin180: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+        pulse: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
         },
-        header: {
-          '0%': { transform: 'rotate(-3deg)' },
-          '100%': { transform: 'rotate(3deg)' },
-        }
       },
       fontFamily: {
         aleo: ['Aleo', 'serif'],
@@ -29,18 +26,21 @@ module.exports = {
       colors: {
         'footer-blue': '#0d112b',
         'header-gray': '#f4f4f6',
+        'main-orange': '#fef5ee',
+        'main-red': '#d61f1f',
+        'main-dark-blue': '#030b5d',
       },
       margin: {
         '26px': '26px',
       },
       fontSize: {
         '2xs': '.625rem',
-        'tiny': '.937rem',
+        tiny: '.937rem',
       },
       lineHeight: {
         '78px': '78px',
-      }
+      },
     },
   },
   plugins: [],
-}
+};

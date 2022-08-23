@@ -40,6 +40,21 @@ module.exports = {
       lineHeight: {
         '78px': '78px',
       },
+      width: {
+        '615px': '615px',
+        '1230px': '1230px',
+      },
+      height: {
+        '480px': '480px',
+      },
+      padding: {
+        25: '98px',
+        '75px': '75px',
+        '110px': '110px',
+      },
+      minHeight: {
+        '700px': '700px',
+      },
     },
   },
   plugins: [],

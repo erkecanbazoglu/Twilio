@@ -3,14 +3,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function BodyFirstPart() {
   return (
-    <section class="flex flex-row w-full h-400 bg-main-orange ">
-      <div class="flex flex-row w-full py-28 px-16">
+    <section class="flex bg-main-orange w-full py-25 justify-center relative">
+      <div class="flex flex-row w-1230px max-w-full h-480px pb-75px text-left items-center justify-center box-border">
         {/* The Left Side */}
-        <div class="box-border px-8 w-6/12 pb-20">
+        <div class="flex-1 flex-col px-8 w-full box-border">
           <div class="text-lg font-semibold leading-7 text-main-red pb-4">
             Twilio Customer Engagement Platform
           </div>
-          <h1 class="text-4xl font-bold text-main-dark-blue pb-4">
+          <h1 class="text-5xl font-bold text-main-dark-blue pb-4">
             Data-driven customer engagement—at scale
           </h1>
           <div class="pb-4">
@@ -46,7 +46,7 @@ function BodyFirstPart() {
           </div>
         </div>
         {/* Mobile media  */}
-        <div class=" w-6/12 pb-20">
+        <div class="flex-1 flex-col w-full items-center justify-center">
           <div class="hidden">
             <picture>
               <source
@@ -68,8 +68,8 @@ function BodyFirstPart() {
         </div>
       </div>
       {/* The background image */}
-      <div class="absolute right-0">
-        <picture class="h-full w-auto max-w-7/12 overflow-visible">
+      <div class="absolute top-0 right-0 h-full w-auto max-w-7/12 block ">
+        <picture class="overflow-auto">
           <source
             srcset="https://twilio-cms-prod.s3.amazonaws.com/images/a7c14300-2e1e-11ec.width-800.format-webp.webpquality-95.webp, https://twilio-cms-prod.s3.amazonaws.com/images/a7c14300-2e1e-11e.width-1600.format-webp.webpquality-95.webp 2x"
             type="image/webp"

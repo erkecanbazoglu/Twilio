@@ -1,33 +1,38 @@
 import React, { useState } from 'react';
 import Title from './Title';
 import MegaDropdown from './MegaDropdown';
-import ProductsDropdown from './MegaDropdowns/ProductsDropdown';
-import SolutionsDropdown from './MegaDropdowns/SolutionsDropdown';
-import DevelopersDropdown from './MegaDropdowns/DevelopersDropdown';
-import ServicesAndSupportDropdown from './MegaDropdowns/ServicesAndSupportDropdown';
-import PricingDropdown from './MegaDropdowns/PricingDropdown';
+// import ProductsDropdown from './MegaDropdowns/ProductsDropdown';
+// import SolutionsDropdown from './MegaDropdowns/SolutionsDropdown';
+// import DevelopersDropdown from './MegaDropdowns/DevelopersDropdown';
+// import ServicesAndSupportDropdown from './MegaDropdowns/ServicesAndSupportDropdown';
+// import PricingDropdown from './MegaDropdowns/PricingDropdown';
+import MegaDropdownInfo from './MegaDropdownInfo';
 
 function TitleBar(props) {
   const titleList = [
-    'Products',
-    'Solutions',
-    'Developers',
-    'Services & Support',
-    'Pricing',
+    'products',
+    'solutions',
+    'developers',
+    'services-and-support',
+    'pricing',
   ];
 
+  const megaDropdownInfo = MegaDropdownInfo;
+
   const [titleDropdowns, setShowTitleDropdown] = useState({
-    Products: false,
-    Developers: false,
-    Solutions: false,
-    'Services & Support': false,
-    Pricing: false,
+    products: false,
+    developers: false,
+    solutions: false,
+    'services-and-support': false,
+    pricing: false,
   });
 
   const [prevDropdown, setPrevDropdown] = useState('null');
 
   async function closeDropdownTransition(index) {
-    let megaDropdown = document.getElementById('mega-dropdown');
+    let megaDropdown = document.getElementById(
+      titleList[index] + '-megadropdown'
+    );
     if (megaDropdown.classList.contains('opacity-100')) {
       megaDropdown.classList.remove('opacity-100');
       megaDropdown.classList.add('opacity-0');
@@ -41,31 +46,34 @@ function TitleBar(props) {
     setShowTitleDropdown(prevValue => {
       return {
         //...prevValue,
-        Products: false,
-        Developers: false,
-        Solutions: false,
-        'Services & Support': false,
-        Pricing: false,
-        [titleList[index]]: !prevValue[titleList[index]],
+        products: false,
+        developers: false,
+        solutions: false,
+        'services-and-support': false,
+        pricing: false,
       };
     });
+    megaDropdown.classList.add('invisible');
   }
 
   async function openDropdownTransition(index) {
     setShowTitleDropdown(prevValue => {
       return {
         //...prevValue,
-        Products: false,
-        Developers: false,
-        Solutions: false,
-        'Services & Support': false,
-        Pricing: false,
+        products: false,
+        developers: false,
+        solutions: false,
+        'services-and-support': false,
+        pricing: false,
         [titleList[index]]: !prevValue[titleList[index]],
       };
     });
-    let megaDropdown = document.getElementById('mega-dropdown');
+    let megaDropdown = document.getElementById(
+      titleList[index] + '-megadropdown'
+    );
     if (megaDropdown.classList.contains('opacity-0')) {
       megaDropdown.classList.remove('opacity-0');
+      megaDropdown.classList.remove('invisible');
       megaDropdown.classList.add('opacity-100');
     }
     let headerTitle = document.getElementById('header-title');
@@ -76,16 +84,12 @@ function TitleBar(props) {
   }
 
   async function handleDropdownClick(index) {
-    console.log(prevDropdown);
     if (prevDropdown === 'null') {
       openDropdownTransition(index);
-      console.log(prevDropdown);
       setPrevDropdown(titleList[index]);
-      console.log(prevDropdown);
     } else if (prevDropdown === titleList[index]) {
       closeDropdownTransition(index);
       setPrevDropdown('null');
-      console.log(prevDropdown);
     } else {
       await closeDropdownTransition(index);
       openDropdownTransition(index);
@@ -111,13 +115,18 @@ function TitleBar(props) {
           >
             <a
               href="#"
-              onClick={handleDropdownClick}
+              onClick={function () {
+                handleDropdownClick(0);
+              }}
               class="block text-gray-700 rounded px-6 hover:bg-gray-100 md:hover:bg-transparent hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               aria-current="page"
             >
               Products
             </a>
-            <MegaDropdown />
+            <MegaDropdown
+              id={titleList[0] + '-megadropdown'}
+              megaDropdownInfo={megaDropdownInfo['0']}
+            />
           </li>
         </div>
         <div class="px-6">
@@ -135,7 +144,10 @@ function TitleBar(props) {
             >
               Solutions
             </a>
-            <SolutionsDropdown />
+            <MegaDropdown
+              id={titleList[1] + '-megadropdown'}
+              megaDropdownInfo={megaDropdownInfo['1']}
+            />
           </li>
         </div>
         <div class="px-6">
@@ -153,7 +165,10 @@ function TitleBar(props) {
             >
               Developers
             </a>
-            <DevelopersDropdown />
+            <MegaDropdown
+              id={titleList[2] + '-megadropdown'}
+              megaDropdownInfo={megaDropdownInfo['2']}
+            />
           </li>
         </div>
         <div class="px-6">
@@ -171,7 +186,10 @@ function TitleBar(props) {
             >
               Services & Support
             </a>
-            <ServicesAndSupportDropdown />
+            <MegaDropdown
+              id={titleList[3] + '-megadropdown'}
+              megaDropdownInfo={megaDropdownInfo['3']}
+            />
           </li>
         </div>
         <div class="px-6">
@@ -189,7 +207,10 @@ function TitleBar(props) {
             >
               Pricing
             </a>
-            <PricingDropdown />
+            <MegaDropdown
+              id={titleList[4] + '-megadropdown'}
+              megaDropdownInfo={megaDropdownInfo['4']}
+            />
           </li>
         </div>
       </ul>

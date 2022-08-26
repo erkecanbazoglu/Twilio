@@ -29,6 +29,8 @@ module.exports = {
         'main-orange': '#fef5ee',
         'main-red': '#d61f1f',
         'main-dark-blue': '#030b5d',
+        'gray-text': '#394762',
+        'dark-blue': '#043cb5',
       },
       margin: {
         '26px': '26px',
@@ -49,6 +51,7 @@ module.exports = {
       },
       padding: {
         25: '98px',
+        7.5: '30px',
         '75px': '75px',
         '110px': '110px',
       },

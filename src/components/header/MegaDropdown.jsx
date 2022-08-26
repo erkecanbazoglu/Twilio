@@ -1,16 +1,8 @@
 import React from 'react';
 
 function MegaDropdown(props) {
-  const {
-    isBlueArea,
-    blueArea,
-    isWhiteArea,
-    whiteArea,
-    containsRightBottomIcon,
-    rightBottomIconInfo,
-    isGrayArea,
-    grayArea,
-  } = props.megaDropdownInfo;
+  const { isBlueArea, blueArea, isWhiteArea, whiteArea, isGrayArea, grayArea } =
+    props.megaDropdownInfo;
 
   function createBottomLinks(bottomLink, index, color) {
     return (
@@ -82,6 +74,7 @@ function MegaDropdown(props) {
             return createSubtitles(item, index, color);
           })}
         </ul>
+        {containsBottomButton && bottomButtonInfo}
       </div>
     );
   }

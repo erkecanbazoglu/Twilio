@@ -27,6 +27,7 @@ module.exports = {
         'footer-blue': '#0d112b',
         'header-gray': '#f4f4f6',
         'main-orange': '#fef5ee',
+        'second-orange': '#fefaf6',
         'main-red': '#d61f1f',
         'main-dark-blue': '#030b5d',
         'gray-text': '#394762',

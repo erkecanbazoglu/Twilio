@@ -30,8 +30,10 @@ Concepts:
 
 Deploy Commands:
 
+```
 npm run deploy
 npm run deploy -- -m "Deploy React app to GitHub Pages"
+```
 
 ## Author
 

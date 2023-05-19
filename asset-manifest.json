@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Twilio/static/css/main.13d2083e.css",
+    "main.js": "/Twilio/static/js/main.db69d7db.js",
+    "static/media/twilio.png": "/Twilio/static/media/twilio.28f13e6f56c9f345d95c.png",
+    "index.html": "/Twilio/index.html",
+    "main.13d2083e.css.map": "/Twilio/static/css/main.13d2083e.css.map",
+    "main.db69d7db.js.map": "/Twilio/static/js/main.db69d7db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13d2083e.css",
+    "static/js/main.db69d7db.js"
+  ]
+}

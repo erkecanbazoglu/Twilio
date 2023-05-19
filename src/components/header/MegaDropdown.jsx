@@ -9,7 +9,7 @@ function MegaDropdown(props) {
       <a
         key={index}
         className="text-xs text-blue-600 text-left font-light underline leading-5 inline-block after:px-2 after:content-['→'] after:text-gray-900 after:inline-block"
-        href="/messaging/sms"
+        href="/Twilio/messaging/sms"
         title="SMS"
       >
         {bottomLink}
@@ -31,7 +31,10 @@ function MegaDropdown(props) {
 
     return (
       <li className="my-6">
-        <a className="flex flex-row items-start leading-6" href="/messaging">
+        <a
+          className="flex flex-row items-start leading-6"
+          href="/Twilio/messaging"
+        >
           {containsLogo && logoInfo}
           <div>
             <div className="flex flex-row pb-1 text-base font-normal justifyt-start items-start hover:text-blue-600 hover:underline">

@@ -69,7 +69,7 @@ function Header() {
                   <ul>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Online Stores</div>
@@ -81,7 +81,7 @@ function Header() {
                     </li>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Segmentation</div>
@@ -93,7 +93,7 @@ function Header() {
                     </li>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Marketing CRM</div>
@@ -107,7 +107,7 @@ function Header() {
                   <ul>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Online Stores</div>
@@ -119,7 +119,7 @@ function Header() {
                     </li>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Segmentation</div>
@@ -131,7 +131,7 @@ function Header() {
                     </li>
                     <li>
                       <a
-                        href="/#"
+                        href="/Twilio/#"
                         className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                       >
                         <div className="font-semibold">Marketing CRM</div>

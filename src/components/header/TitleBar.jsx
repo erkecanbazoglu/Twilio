@@ -105,7 +105,7 @@ function TitleBar(props) {
             className="border-b-2 border-white relative leading-78px transition ease-in duration-300 "
           >
             <a
-              href="/#"
+              href="/Twilio/#"
               onClick={function () {
                 handleDropdownClick(0);
               }}
@@ -126,7 +126,7 @@ function TitleBar(props) {
             className="border-b-2 border-white relative leading-78px transition ease-in duration-300 "
           >
             <a
-              href="/#"
+              href="/Twilio/#"
               onClick={function () {
                 handleDropdownClick(1);
               }}
@@ -147,7 +147,7 @@ function TitleBar(props) {
             className="border-b-2 border-white relative leading-78px transition ease-in duration-300 "
           >
             <a
-              href="/#"
+              href="/Twilio/#"
               onClick={function () {
                 handleDropdownClick(2);
               }}
@@ -168,7 +168,7 @@ function TitleBar(props) {
             className="border-b-2 border-white relative leading-78px transition ease-in duration-300 "
           >
             <a
-              href="/#"
+              href="/Twilio/#"
               onClick={function () {
                 handleDropdownClick(3);
               }}
@@ -189,7 +189,7 @@ function TitleBar(props) {
             className="border-b-2 border-white relative leading-78px transition ease-in duration-300 "
           >
             <a
-              href="/#"
+              href="/Twilio/#"
               onClick={function () {
                 handleDropdownClick(4);
               }}

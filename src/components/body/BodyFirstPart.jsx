@@ -40,7 +40,7 @@ function BodyFirstPart() {
                 <div className="">
                   <a
                     className="text-blue-600 text-base font-light underline"
-                    href="/help/sales"
+                    href="/Twilio/help/sales"
                     role="link"
                   >
                     Talk to sales
